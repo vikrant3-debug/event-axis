@@ -80,21 +80,26 @@ Three roles: `ORGANIZER`, `ATTENDEE`, `STAFF`
 tickets/
 ├── src/main/java/com/eventproject/tickets/
 │   ├── config/
-│   │   ├── JwtUtil.java
+│   │   ├── JpaConfiguration.java
 │   │   ├── JwtAuthenticationFilter.java
+│   │   ├── JwtUtil.java
+│   │   ├── QrCodeConfig.java
 │   │   └── SecurityConfig.java
 │   ├── controllers/
 │   │   ├── AuthController.java
 │   │   ├── EventController.java
+│   │   ├── GlobalExceptionHandler.java
+│   │   ├── PublishedEventController.java
 │   │   ├── TicketController.java
 │   │   ├── TicketTypeController.java
 │   │   └── TicketValidationController.java
 │   ├── domain/
 │   │   ├── entities/
 │   │   └── dtos/
+│   └── exceptions/
+│   ├── mappers/
 │   ├── repositories/
 │   ├── services/
-│   └── exceptions/
 │
 ticket_frontend/
 ├── src/
