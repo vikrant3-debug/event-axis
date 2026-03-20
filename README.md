@@ -195,7 +195,7 @@ POST   /api/v1/ticket-validations   - Validate a ticket (STAFF)
 
 ## Notes
 
-- Ticket validation is idempotent in the sense that scanning an already-validated ticket returns `INVALID` — preventing duplicate entry
+- Ticket validation prevents duplicate entry by marking tickets as used and rejecting subsequent scans.
 - The QR code contains the ticket UUID which is what gets validated
 - Payment flow is a mock — no real payment gateway is integrated
 
