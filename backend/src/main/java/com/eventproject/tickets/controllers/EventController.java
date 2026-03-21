@@ -68,7 +68,7 @@ public class EventController {
     public ResponseEntity<UpdateEventResponseDto> updateEvent(
             @AuthenticationPrincipal String email,
             @PathVariable UUID eventId,
-            @Valid @RequestBody UpdateEventResponseDto updateEventRequestDto)
+            @Valid @RequestBody UpdateEventRequestDto updateEventRequestDto)
     {
         UpdateEventRequest updateEventRequest = eventMapper.fromDto(updateEventRequestDto);
         UUID userId = userService.getUserByEmail(email).getId();
